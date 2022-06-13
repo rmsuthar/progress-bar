@@ -6,8 +6,7 @@ ul {
   justify-content: space-between;
   margin: 0;
   padding: 0;
-  background: linear-gradient(#000, #000) left/35% 1px no-repeat,
-    linear-gradient(#ccc, #ccc) left/100% 1px no-repeat;
+  background: linear-gradient(#ccc, #ccc) left/100% 1px no-repeat;
 }
 
 li {
@@ -25,6 +24,11 @@ li {
 li {
   background-color: black;
   color: white;
+}
+
+li.completed {
+  background-color: black !important;
+  color: white !important;
 }
 
 li.active {
