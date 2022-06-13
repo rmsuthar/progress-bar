@@ -1,0 +1,43 @@
+body {
+  font-family: sans-serif;
+}
+ul {
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(#000, #000) left/340px 1px no-repeat,
+    linear-gradient(#ccc, #ccc) left/100% 1px no-repeat;
+}
+
+li {
+  list-style-type: none;
+  background-color: white;
+  padding: 10px;
+  font-size: 15px;
+  height: 15px;
+  width: 15px;
+  border: solid 1px #000;
+  text-align: center;
+  border-radius: 50%;
+}
+
+li {
+  background-color: black;
+  color: white;
+}
+
+li.active {
+  background-color: white;
+  color: black;
+  border-color: black;
+}
+
+li.active ~ li {
+  background-color: white;
+  color: black;
+  border-color: #ccc;
+}
+li.end ~ li {
+  display: none;
+}
