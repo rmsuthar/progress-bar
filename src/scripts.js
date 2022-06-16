@@ -6,9 +6,9 @@ function findActiveEl(el) {
     El.querySelector(".active").getBoundingClientRect();
   if (actEl)
     El.style.background =
-      "linear-gradient(#000, #000) left/" +
+      "linear-gradient(black, black) left/" +
       actEl.x +
-      "px 1px no-repeat, linear-gradient(#c8c8c8, #c8c8c8) left/100% 1px no-repeat";
+      "px 2px no-repeat, linear-gradient(#c8c8c8, #c8c8c8) left/100% 1px no-repeat";
 }
 
 findActiveEl(".progress");
@@ -32,6 +32,7 @@ function nextNav(){
   }else{
     El.classList.add("completed");  
   }
+  findActiveEl(".progress");
 }
 function prevNav(){
   const El = document.querySelector(".progress li.active");
@@ -40,5 +41,6 @@ function prevNav(){
     El.classList.remove("active");
     El.classList.remove("completed");
   }  
+  findActiveEl(".progress");
 }
 
